@@ -27,7 +27,5 @@ jobs:
     steps:
       - name: Check style
         run: test -z $(go fmt ./...)
-
-      - uses: dominikh/staticcheck-action@v1
-          with:
-            version: "latest"
+      - name: Staticcheck
+        uses: dominikh/staticcheck-action@v1.3.1
